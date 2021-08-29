@@ -12,10 +12,13 @@ def fizzbuzz(number: int):
 
 
 def super_fizzbuzz(number: int):
-    if fizzbuzz(number) == "":
-        return "NoFizzBuzz"
+    if number >= 0:
+        if fizzbuzz(number) == "":
+            return "NoFizzBuzz"
+        else:
+            return fizzbuzz(number)
     else:
-        return fizzbuzz(number)
+        return "InputOnlyPositiveInteger"
 
 
 if __name__ == '__main__':
