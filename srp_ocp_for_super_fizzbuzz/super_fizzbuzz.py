@@ -1,11 +1,3 @@
-def super_fizzbuzz(number: int):
-    result = fizzbuzz(number)
-    if result == "":
-        return "NoFizzBuzz"
-    else:
-        return result
-
-
 def fizzbuzz(number: int):
     result = ""
     if number % 3 == 0:
@@ -19,6 +11,13 @@ def fizzbuzz(number: int):
     return result
 
 
+def super_fizzbuzz(number: int):
+    if fizzbuzz(number) == "":
+        return "NoFizzBuzz"
+    else:
+        return fizzbuzz(number)
+
+
 if __name__ == '__main__':
-    input_number = int(input('INPUT : '))
+    input_number = int(input("INPUT : "))
     print(super_fizzbuzz(input_number))
