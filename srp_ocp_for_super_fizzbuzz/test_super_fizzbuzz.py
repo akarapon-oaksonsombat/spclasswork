@@ -19,7 +19,7 @@ class TestSuperFizzBuzz(unittest.TestCase):
             self.assertEqual(super_fizzbuzz(test_number), expected_result)
 
     def test_negative(self):
-        for test_number in range(1, 10000, -1):
+        for test_number in range(0, -10000, -1):
             self.assertEqual(super_fizzbuzz(test_number), "InputOnlyPositiveInteger")
 
 
