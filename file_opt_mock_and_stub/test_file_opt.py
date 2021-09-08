@@ -12,7 +12,7 @@ class OptTest(unittest.TestCase):
         # set up the mock.
         mock_os_path.isfile.return_value = False
         # call rm_when_lower with path which not exit.
-        filename = "aaa"
+        filename = mock.Mock("aaa")
         # test that the filename is lowercase.
         filename.isupper.return_value = False
         # call function to test.
@@ -42,7 +42,7 @@ class OptTest(unittest.TestCase):
         # set up the mock.
         mock_os_path.isfile.return_value = False
         # call rm_when_lower with path which not exit.
-        filename = "AAA"
+        filename = mock.Mock("AAA")
         # test that the filename is uppercase.
         filename.isupper.return_value = True
         # call function to test.
