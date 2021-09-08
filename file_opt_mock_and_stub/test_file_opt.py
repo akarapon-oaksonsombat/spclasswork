@@ -1,5 +1,4 @@
 from file_opt import rm_when_lower
-
 import unittest
 import mock
 
